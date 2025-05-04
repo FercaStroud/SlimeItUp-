@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../types';
-import Grid from '../../components/game/Grid';
+import { RootStackParamList } from '../../../types';
+import Grid from '../game/Grid';
 
 const GameScreen = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList, 'Game'>>();

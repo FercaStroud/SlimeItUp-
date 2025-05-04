@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, StyleSheet } from 'react-native';
-import AccessibilitySwitches from '../../components/settings/AccessibilitySwitches';
-import AudioSliders from '../../components/settings/AudioSliders';
+import AccessibilitySwitches from '../settings/AccessibilitySwitches';
+import AudioSliders from '../settings/AudioSliders';
 
 const OptionsScreen = () => {
   return (

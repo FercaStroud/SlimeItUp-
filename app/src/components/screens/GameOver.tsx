@@ -2,17 +2,16 @@ import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../types';
+import { RootStackParamList } from '../../../types';
 
-const MainMenu = () => {
-  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList, 'MainMenu'>>();
+const GameOver = () => {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList, 'GameOver'>>();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Slime It Up!</Text>
-      <Button title="Start Game" onPress={() => navigation.navigate('Game')} />
-      <Button title="Unlocked Items" onPress={() => navigation.navigate('PowersGallery')} />
-      <Button title="Options" onPress={() => navigation.navigate('Options')} />
+      <Text style={styles.title}>Game Over</Text>
+      <Button title="Try Again" onPress={() => navigation.navigate('Game')} />
+      <Button title="Back to Menu" onPress={() => navigation.navigate('MainMenu')} />
     </View>
   );
 };
@@ -27,9 +26,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 36,
     fontWeight: 'bold',
-    color: '#00ff99',
+    color: '#ff6666',
     marginBottom: 40,
   },
 });
 
-export default MainMenu;
+export default GameOver;

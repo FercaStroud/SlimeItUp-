@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import ProgressTree from '../../components/progression/ProgressTree';
+import ProgressTree from '../progression/ProgressTree';
 
 const PowersGallery = () => {
   return (

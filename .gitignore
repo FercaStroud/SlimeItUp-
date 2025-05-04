@@ -1,2 +1,48 @@
-/.idea/
-/app/node_modules/
+# Archivos del editor
+.idea/
+.vscode/
+*.swp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Dependencias
+node_modules/
+app/node_modules/
+
+# Salidas nativas
+app/android/.gradle/
+app/android/app/build/
+app/android/build/
+app/ios/build/
+app/ios/Pods/
+app/ios/DerivedData/
+
+# CocoaPods
+Podfile.lock
+app/ios/Podfile.lock
+
+# Bundles, salidas y Metro
+*.bundle
+*.packager
+*.expo
+.expo/
+.expo-shared/
+.watchmanconfig
+app/.bundle/
+
+# Archivos temporales
+*.log
+*.tmp
+*.temp
+
+# Variables de entorno
+.env
+.env.*
+
+# Salidas de test
+coverage/
+jest-html-reporters-*.html
