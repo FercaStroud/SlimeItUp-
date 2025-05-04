@@ -6,7 +6,7 @@ interface Props {
   message?: string;
 }
 
-const BossWarning = ({ icon, message = "A Boss Approaches!" }: Props) => {
+const BossWarningOverlay = ({ icon, message = "A Boss Approaches!" }: Props) => {
   const [blinkAnim] = useState(new Animated.Value(0));
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BossWarning;
+export default BossWarningOverlay;

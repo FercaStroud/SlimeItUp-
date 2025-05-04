@@ -1,6 +1,6 @@
-
-
 import React, { createContext, useContext, useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useEffect } from 'react';
 
 type Theme = 'pixel' | 'kawaii' | 'steampunk' | 'futuristic';
 
@@ -12,7 +12,18 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [currentTheme, setTheme] = useState<Theme>('kawaii');
+  const [currentTheme, setCurrentTheme] = useState<Theme>('kawaii');
+
+  useEffect(() => {
+    AsyncStorage.getItem('theme').then(stored => {
+      if (stored) setCurrentTheme(stored as Theme);
+    });
+  }, []);
+
+  const setTheme = (theme: Theme) => {
+    setCurrentTheme(theme);
+    AsyncStorage.setItem('theme', theme);
+  };
 
   return (
     <ThemeContext.Provider value={{ currentTheme, setTheme }}>

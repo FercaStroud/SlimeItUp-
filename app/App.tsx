@@ -2,11 +2,11 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import MainMenu from './src/components/screens/MainMenu';
-import GameScreen from './src/components/screens/GameScreen';
-import GameOver from './src/components/screens/GameOver';
-import PowersGallery from './src/components/screens/PowersGallery';
-import OptionsScreen from './src/components//screens/OptionsScreen';
+import MainMenu from './src/screens/MainMenu';
+import GameScreen from './src/screens/GameScreen';
+import GameOver from './src/screens/GameOver';
+import PowersGallery from './src/screens/PowersGallery';
+import OptionsScreen from './src/screens/OptionsScreen';
 
 const Stack = createNativeStackNavigator();
 
